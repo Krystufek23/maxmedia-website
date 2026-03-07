@@ -1,0 +1,10 @@
+export { Hero } from "./Hero";
+export { Statistics } from "./Statistics";
+export { About } from "./About";
+export { AISection } from "./AISection";
+export { Contacts } from "./Contacts";
+export { Team } from "./Team";
+export { Services } from "./Services";
+export { Process } from "./Process";
+export { References } from "./References";
+export { Contact } from "./Contact";
