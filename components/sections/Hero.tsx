@@ -35,7 +35,7 @@ export function Hero() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               <span className="text-primary">30 let</span> zkušeností.
               <br />
-              Současné PR bez starých návyků.
+              Moderní PR bez starých návyků.
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-4">
@@ -44,7 +44,8 @@ export function Hero() {
 
             <p className="text-lg text-gray-400 mb-8 max-w-xl">
               Nehrajeme si na velkou agenturu — odvádíme velkou práci v chytrém
-              butikovém prostředí. Bez zbytečné omáčky. S důrazem na výsledek.
+              butikovém prostředí. Bez zbytečné omáčky. S důrazem na výsledek
+              a konzultantský přístup.
             </p>
 
             <div className="flex flex-wrap gap-4">

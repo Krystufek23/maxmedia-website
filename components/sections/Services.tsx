@@ -34,7 +34,7 @@ const services: Service[] = [
       "Kompletní PR služby od produktového PR přes storytelling až po krizovou komunikaci.",
     items: [
       "Produktové PR",
-      "Příběh značky (Storytelling)",
+      "Příběh značky",
       "Korporátní PR",
       "Krizová komunikace",
     ],
@@ -146,6 +146,27 @@ const services: Service[] = [
       "Sportovní akce",
       "100+ eventů za sebou",
     ],
+  },
+  {
+    id: "mix",
+    title: "MIX",
+    icon: (
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1.5}
+          d="M5 4h14l-7 9-7-9zm7 9v7m-3 0h6"
+        />
+      </svg>
+    ),
+    description:
+      "Nejvíce nás baví vše namixovat dohromady, protože tak vznikne ten nejlepší koktejl.",
   },
 ];
 

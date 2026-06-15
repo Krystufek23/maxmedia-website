@@ -19,15 +19,15 @@ export function Contacts() {
         </p>
 
         <p className="text-xl md:text-2xl font-semibold text-gray-900 mb-8">
-          Dokážeme vás dostat do{" "}
-          <span className="text-primary">jakéhokoliv média.</span>
+          Tam kde ostatní ztroskotají,{" "}
+          <span className="text-primary">my najdeme do médií cestu.</span>
         </p>
 
         {/* Media logos */}
         <div className="relative py-8 mb-8">
           <div className="relative w-full max-w-4xl mx-auto">
             <Image
-              src="/images/media-logos.png"
+              src="/images/media-logos.jpg"
               alt="Média, se kterými spolupracujeme - Forbes, Vogue, Blesk, DVTV, Deník a další"
               width={1200}
               height={600}

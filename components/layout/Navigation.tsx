@@ -36,15 +36,27 @@ export function Navigation() {
     >
       <Container>
         <nav className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#uvod" className="relative z-10">
+          {/* Logo - switch between normal and inverse version */}
+          <a href="#uvod" className="relative z-10 block h-10">
+            {/* Logo for light background (when scrolled) */}
             <Image
               src="/images/logo.png"
               alt="maXmedia"
               width={160}
               height={40}
-              className={`h-10 w-auto transition-all duration-300 ${
-                isScrolled ? "" : "brightness-0 invert"
+              className={`h-10 w-auto transition-opacity duration-300 absolute top-0 left-0 ${
+                isScrolled ? "opacity-100" : "opacity-0"
+              }`}
+              priority
+            />
+            {/* Logo for dark background (not scrolled) - inverse version with blend mode */}
+            <Image
+              src="/images/logo-inverse.png"
+              alt="maXmedia"
+              width={160}
+              height={40}
+              className={`h-10 w-auto transition-opacity duration-300 mix-blend-lighten ${
+                isScrolled ? "opacity-0" : "opacity-100"
               }`}
               priority
             />

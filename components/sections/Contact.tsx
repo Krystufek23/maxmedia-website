@@ -7,7 +7,7 @@ export function Contact() {
     <Section id="kontakt" background="gradient">
       <SectionTitle
         title="Kontaktujte nás"
-        subtitle="Máte projekt, který potřebuje PR podporu? Ozvěte se nám a probereme, jak vám můžeme pomoci."
+        subtitle="Máte projekt, který potřebuje podporu? Ozvěte se nám a probereme, jak vám můžeme pomoci."
         light
       />
 

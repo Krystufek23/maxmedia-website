@@ -7,7 +7,8 @@ interface TeamMember {
   name: string;
   position: string;
   quote?: string;
-  image: string;
+  image?: string;
+  initials?: string;
   isCore?: boolean;
 }
 
@@ -16,21 +17,28 @@ const coreTeam: TeamMember[] = [
     name: "Kryštof Šabacký",
     position: "Director",
     quote: "PR nás baví! Neděláme z PR vědu a máme výsledky.",
-    image: "/images/team/krystof-sabacky.jpeg",
+    image: "/images/team/krystof.png",
     isCore: true,
   },
   {
     name: "Monika Netřeba",
     position: "PR & Content Manager",
-    quote: "Říká vám to něco? Nám ano!",
-    image: "/images/team/monika-netreba.jpeg",
+    quote: "Máme kontakty, dokážeme si poradit.",
+    image: "/images/team/monika.png",
     isCore: true,
   },
   {
-    name: "Daniela Pokorná",
-    position: "PR & Social Manager",
-    quote: "Ale hlavně máme kontakty!",
-    image: "/images/team/daniela-pokorna.png",
+    name: "Jan Vlášek",
+    position: "Kreativa, content, social",
+    quote: "Baví nás to a každá výzva má řešení a nic není extrém.",
+    image: "/images/team/jan-vlasek.png",
+    isCore: true,
+  },
+  {
+    name: "Marlene Lašová",
+    position: "Novozélandská spojka",
+    quote: "Kdo má pobočku na Novém Zélandu.",
+    initials: "ML",
     isCore: true,
   },
 ];
@@ -39,31 +47,39 @@ const specialists: TeamMember[] = [
   {
     name: "Adriana Suská",
     position: "Social Performance",
-    image: "/images/team/adriena-suska.jpeg",
-  },
-  {
-    name: "Jan Vlášek",
-    position: "Extrémní specialista",
-    image: "/images/team/jan-vlasek-105825.jpg",
+    image: "/images/team/adriana.png",
   },
   {
     name: "Jakub Uksa",
-    position: "Grafika (Kubula/Cubic)",
-    image: "/images/team/jakub_uksa.webp",
+    position: "Grafika",
+    image: "/images/team/jakub-uksa.png",
+  },
+  {
+    name: "Petr Homolka",
+    position: "PPC specialist",
+    image: "/images/team/petr-homolka.png",
   },
 ];
 
 function TeamCard({ member }: { member: TeamMember }) {
   return (
     <Card className="text-center group overflow-hidden" padding="none">
-      {/* Image */}
-      <div className="relative aspect-[4/5] overflow-hidden">
-        <Image
-          src={member.image}
-          alt={member.name}
-          fill
-          className="object-cover transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
-        />
+      {/* Image / Initials */}
+      <div className="relative aspect-[4/5] overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300">
+        {member.image ? (
+          <Image
+            src={member.image}
+            alt={member.name}
+            fill
+            className="object-cover transition-all duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="text-6xl md:text-7xl font-bold text-gray-500 select-none transition-colors duration-500 group-hover:text-primary">
+              {member.initials ?? member.name.charAt(0)}
+            </span>
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
         {/* Quote overlay */}
@@ -96,7 +112,7 @@ export function Team() {
 
       <SectionTitle
         title="Náš tým"
-        subtitle="Náš tým stojí na zkušenosti, sehranosti a odbornosti. Umíme obsáhnout každodenní operativu i strategické řízení komunikace. A když je potřeba, sáhneme i po ověřených externích specialistech a kontaktech."
+        subtitle="Náš tým stojí na zkušenostech, sehranosti a odbornosti. Umíme obsáhnout každodenní operativu i strategické řízení komunikace. A když je potřeba, sáhneme i po ověřených externích specialistech."
       />
 
       {/* Core Team */}
@@ -104,7 +120,7 @@ export function Team() {
         <h3 className="text-xl font-semibold text-gray-600 text-center mb-6">
           Core tým
         </h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
           {coreTeam.map((member) => (
             <TeamCard key={member.name} member={member} />
           ))}
@@ -116,7 +132,7 @@ export function Team() {
         <h3 className="text-xl font-semibold text-gray-600 text-center mb-6">
           Specialisté
         </h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-2xl mx-auto">
           {specialists.map((member) => (
             <TeamCard key={member.name} member={member} />
           ))}

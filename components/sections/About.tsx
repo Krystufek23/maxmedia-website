@@ -13,7 +13,10 @@ export function About() {
           <div className="space-y-6 text-lg text-gray-600">
             <p>
               Jsme plnohodnotná PR a marketingová agentura s vlastním silným
-              portfoliem klientů.{" "}
+              portfoliem klientů.
+            </p>
+
+            <p>
               <strong className="text-gray-900">Sport máme v krvi</strong> –
               PR spojené se sportem a podporou sportovních značek je stále
               naší doménou.
@@ -21,8 +24,8 @@ export function About() {
 
             <p>
               Díky našemu týmu konzultantů jsme schopni nabídnout jakékoliv
-              služby z oblasti public relations. Máme zkušenosti z působení
-              v mezinárodních velkých síťových PR agenturách.
+              služby z oblasti marketingu a PR. Máme zkušenosti z působení
+              v mezinárodních síťových PR agenturách.
             </p>
 
             <p className="text-primary font-semibold text-xl">
@@ -63,8 +66,8 @@ export function About() {
               {[
                 "Butikový přístup s výsledky velkých agentur",
                 "Zkušenosti z mezinárodních PR sítí",
-                "Specialisté na sportovní PR",
                 "Osobní přístup ke každému klientovi",
+                "Pobočka na Novém Zélandu",
               ].map((point, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <svg
