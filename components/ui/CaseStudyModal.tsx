@@ -117,13 +117,14 @@ export function CaseStudyModal({ isOpen, study, onClose }: CaseStudyModalProps) 
         <div className="p-8 md:p-12 space-y-8">
           {study.images.map((img, i) => (
             <figure key={img.src} className="space-y-3">
-              <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-lg bg-gray-100">
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-lg bg-gray-100">
                 <Image
                   src={img.src}
                   alt={img.alt}
-                  fill
+                  width={2000}
+                  height={1125}
                   sizes="(min-width: 1024px) 1024px, 100vw"
-                  className="object-cover"
+                  className="w-full h-auto"
                   priority={i === 0}
                 />
               </div>
