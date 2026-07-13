@@ -38,7 +38,7 @@ const coreTeam: TeamMember[] = [
     name: "Marlene Lašová",
     position: "Novozélandská spojka",
     quote: "Kdo má pobočku na Novém Zélandu.",
-    initials: "ML",
+    image: "/images/team/marlene.png",
     isCore: true,
   },
 ];

@@ -54,6 +54,86 @@ const stihlDetail: CaseStudyDetail = {
   ],
 };
 
+const britDetail: CaseStudyDetail = {
+  title: "Brit — Public Relations 2025",
+  subtitle:
+    "Dlouhodobá PR spolupráce s prémiovou značkou krmiv pro psy a kočky VAFO Praha.",
+  metrics: [
+    { label: "Kumulovaný zásah", value: "28,4 mio" },
+    { label: "PR výstupů", value: "240" },
+    { label: "PR hodnota (AVE)", value: "31,4 mio Kč" },
+    { label: "Inzertní hodnota", value: "18,1 mio Kč" },
+  ],
+  images: [
+    {
+      src: "/images/case-studies/brit-metrics.png",
+      alt: "Brit — výsledky PR kampaně 2025",
+      caption: "Meziroční růst kumulovaného zásahu z 9,7 mio (2022) na 28,4 mio (2025)",
+    },
+    {
+      src: "/images/case-studies/brit-vystupy-1.png",
+      alt: "Brit — ukázky mediálních výstupů",
+      caption: "TV rozhovory a magazínové výstupy s produktovým portfoliem",
+    },
+    {
+      src: "/images/case-studies/brit-vystupy-2.png",
+      alt: "Brit — ukázky mediálních výstupů",
+      caption: "Print poradny a odborné články napříč lifestylovými tituly",
+    },
+  ],
+};
+
+const skyrDetail: CaseStudyDetail = {
+  title: "Skyr — Social Media 2024",
+  subtitle:
+    "Kompletní social media management a influencer marketing pro islandský jogurt Skyr od Bohušovické mlékárny.",
+  metrics: [
+    { label: "Zásah FB & IG", value: "5,14 mio" },
+    { label: "Engagement", value: "2,1 mio" },
+    { label: "Barterových výstupů", value: "367" },
+    { label: "Zásah ambasadorů", value: "1,8 mio" },
+  ],
+  images: [
+    {
+      src: "/images/case-studies/skyr-metrics.png",
+      alt: "Skyr — výsledky v číslech",
+      caption: "Roční kumulativní výsledky sociálních sítí a ambasadorských výstupů",
+    },
+    {
+      src: "/images/case-studies/skyr-aktivity.png",
+      alt: "Skyr — aktivity v rámci projektu",
+      caption: "Tvorba receptů, spolupráce s influencery a produkce videí",
+    },
+    {
+      src: "/images/case-studies/skyr-content.png",
+      alt: "Skyr — ukázky obsahu",
+      caption: "Ukázka lifestyle obsahu a produktových kampaní",
+    },
+  ],
+};
+
+const lskDetail: CaseStudyDetail = {
+  title: "LEVELSPORTKONCEPT",
+  subtitle:
+    "Kompletní servis pro prémiového distributora sportovních značek — 15 let růstu, sport od A až do Z.",
+  metrics: [
+    { label: "Nárůst obratu", value: "10×" },
+    { label: "Celkový zásah", value: "44,8 mio" },
+    { label: "Mediálních výstupů", value: "800+" },
+    { label: "Inzertní hodnota", value: "51,2 mio Kč" },
+  ],
+  images: [
+    { src: "/images/case-studies/lsk-1.png", alt: "LSK — úvod", caption: "15 let růstu prémiového sportovního distributora" },
+    { src: "/images/case-studies/lsk-2.png", alt: "LSK — portfolio značek", caption: "Portfolio značek napříč Run, Ski/Outdoor a Bike segmenty" },
+    { src: "/images/case-studies/lsk-3.png", alt: "LSK — nárůst obratu", caption: "Nárůst obratu 10× za 10 let (3,12 mio € → 40 mio €)" },
+    { src: "/images/case-studies/lsk-4.png", alt: "LSK — marketing values 2025", caption: "Marketingové výsledky maXmedia pro LSK v roce 2025" },
+    { src: "/images/case-studies/lsk-5.png", alt: "LSK — winter advertisements", caption: "Zimní inzertní kampaně pro Maloja, Kästle, LEKI a POC" },
+    { src: "/images/case-studies/lsk-6.png", alt: "LSK — kampaně", caption: "Kreativa a produktové vizuály pro klíčové značky" },
+    { src: "/images/case-studies/lsk-7.png", alt: "LSK — mediální výstupy", caption: "Ukázky mediálních výstupů a spoluprací" },
+    { src: "/images/case-studies/lsk-8.png", alt: "LSK — akce a eventy", caption: "Podpora značek na akcích a eventech" },
+  ],
+};
+
 const caseStudies: CaseStudy[] = [
   {
     client: "STIHL Timbersports 2019",
@@ -65,20 +145,23 @@ const caseStudies: CaseStudy[] = [
   {
     client: "Brit",
     result: "Kompletní PR kampaň",
-    metric: "12,6 mio mediální zásah",
-    hasCaseStudy: false,
+    metric: "28,4 mio zásah",
+    hasCaseStudy: true,
+    detail: britDetail,
   },
   {
     client: "Skyr",
     result: "Social media management",
-    metric: "1 mio zásah za Q1",
-    hasCaseStudy: false,
+    metric: "5,14 mio zásah FB/IG",
+    hasCaseStudy: true,
+    detail: skyrDetail,
   },
   {
     client: "LEVELSPORTKONCEPT",
     result: "Sport od A až do Z",
-    metric: "Dlouhodobá spolupráce",
-    hasCaseStudy: false,
+    metric: "10× nárůst za 10 let",
+    hasCaseStudy: true,
+    detail: lskDetail,
   },
 ];
 
