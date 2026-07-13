@@ -1,68 +1,30 @@
 "use client";
 
+import Image from "next/image";
 import { Section } from "../ui";
-
-const aiTools = [
-  {
-    name: "ChatGPT",
-    color: "from-emerald-400 to-emerald-600",
-  },
-  {
-    name: "Claude",
-    color: "from-orange-400 to-orange-600",
-  },
-  {
-    name: "Gemini",
-    color: "from-blue-400 to-blue-600",
-  },
-  {
-    name: "Perplexity",
-    color: "from-cyan-400 to-cyan-600",
-  },
-];
 
 export function AISection() {
   return (
     <Section background="gradient">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
-        {/* Visual - AI Tools */}
+        {/* Visual - AI Hero */}
         <div className="order-2 lg:order-1">
           <div className="relative">
-            {/* Central orb */}
-            <div className="relative w-64 h-64 mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/10 rounded-full animate-pulse-glow" />
-              <div className="absolute inset-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-full flex items-center justify-center">
-                <span className="text-4xl font-bold text-white">AI</span>
+            <div className="relative z-10 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl p-1">
+              <div className="relative rounded-3xl overflow-hidden">
+                <Image
+                  src="/images/ai-hero.jpg"
+                  alt="PR driven by AI — pracovní stůl s AI chatem, českým denníkem a plánem kampaně"
+                  width={1024}
+                  height={1024}
+                  className="w-full h-auto"
+                />
               </div>
-
-              {/* Orbiting tools */}
-              {aiTools.map((tool, index) => {
-                const angle = (index * 90 - 45) * (Math.PI / 180);
-                const radius = 140;
-                const x = Math.cos(angle) * radius;
-                const y = Math.sin(angle) * radius;
-
-                return (
-                  <div
-                    key={tool.name}
-                    className="absolute w-20 h-20 -translate-x-1/2 -translate-y-1/2 animate-float"
-                    style={{
-                      left: `calc(50% + ${x}px)`,
-                      top: `calc(50% + ${y}px)`,
-                      animationDelay: `${index * 0.5}s`,
-                    }}
-                  >
-                    <div
-                      className={`w-full h-full rounded-2xl bg-gradient-to-br ${tool.color} flex items-center justify-center shadow-lg`}
-                    >
-                      <span className="text-white text-xs font-semibold text-center px-2">
-                        {tool.name}
-                      </span>
-                    </div>
-                  </div>
-                );
-              })}
             </div>
+
+            {/* Decorative accents */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/30 rounded-full blur-xl" />
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-accent/20 rounded-full blur-xl" />
           </div>
         </div>
 
