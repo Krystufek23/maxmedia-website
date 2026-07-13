@@ -66,9 +66,9 @@ export function Hero() {
                 <div className="relative rounded-3xl overflow-hidden">
                   <Image
                     src="/images/hero-max.png"
-                    alt="maXmedia"
-                    width={2940}
-                    height={1912}
+                    alt="maXmedia — FMX Gladiator Games"
+                    width={1916}
+                    height={1284}
                     className="w-full h-auto"
                     priority
                   />
