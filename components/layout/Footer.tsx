@@ -1,5 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import { Container } from "../ui";
+
+function openCookieSettings() {
+  if (typeof window === "undefined") return;
+  localStorage.removeItem("cookie_consent");
+  window.dispatchEvent(new Event("openCookieBanner"));
+}
 
 const footerLinks = {
   navigation: [
@@ -115,7 +123,8 @@ export function Footer() {
               </a>
             ))}
             <button
-              id="cookie-settings"
+              type="button"
+              onClick={openCookieSettings}
               className="text-gray-500 hover:text-white transition-colors"
             >
               Nastavení cookies
