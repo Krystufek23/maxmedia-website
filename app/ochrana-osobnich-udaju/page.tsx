@@ -4,6 +4,7 @@ import { Navigation, Footer } from "@/components/layout";
 import { Container } from "@/components/ui";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ochrana-osobnich-udaju" },
   title: "Ochrana osobních údajů | maXmedia",
   description: "Zásady ochrany osobních údajů společnosti maXmedia s.r.o.",
 };

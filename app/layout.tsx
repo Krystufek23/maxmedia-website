@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, DM_Sans } from "next/font/google";
 import Script from "next/script";
+import { JsonLd } from "@/components/seo/JsonLd";
 import "./globals.css";
 
 const GA_MEASUREMENT_ID = "G-QGYSVW8K6S";
+const SITE_URL = "https://www.maxmediapr.cz";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-heading",
@@ -18,6 +20,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: "/" },
   title: "maXmedia | PR agentura s 30 lety zkušeností",
   description:
     "PR agentura maXmedia - 30 let zkušeností, současné PR bez starých návyků. Spojujeme osvědčené know-how s AI, rychlostí a přesností.",
@@ -35,11 +39,13 @@ export const metadata: Metadata = {
     title: "maXmedia | PR agentura s 30 lety zkušeností",
     description:
       "PR agentura maXmedia - 30 let zkušeností, současné PR bez starých návyků.",
-    url: "https://maxmediapr.cz",
+    url: SITE_URL,
     siteName: "maXmedia",
     locale: "cs_CZ",
     type: "website",
+    images: [{ url: "/images/maxmedia-logo.png", alt: "maXmedia" }],
   },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -71,6 +77,7 @@ export default function RootLayout({
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
         />
+        <JsonLd />
       </head>
       <body className="antialiased">{children}</body>
     </html>

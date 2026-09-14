@@ -4,6 +4,7 @@ import { Navigation, Footer } from "@/components/layout";
 import { Container } from "@/components/ui";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/cookies" },
   title: "Zásady používání cookies | maXmedia",
   description:
     "Informace o používání cookies na webu maXmedia — technické a analytické (Google Analytics) cookies s Vaším souhlasem.",
