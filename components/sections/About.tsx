@@ -68,6 +68,7 @@ export function About() {
                 "Zkušenosti z mezinárodních PR sítí",
                 "Osobní přístup ke každému klientovi",
                 "Pobočka na Novém Zélandu",
+                "Sport nás vykoval, dal nám pravidla a umíme ho",
               ].map((point, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <svg
