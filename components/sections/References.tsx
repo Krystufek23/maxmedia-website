@@ -195,6 +195,8 @@ const clientLogos: ClientLogo[] = [
   { name: "Bohušovická / Protein", category: "pet-fmcg", logo: "/images/logos/PET-FMCG/bohusovicka.png" },
   { name: "BusyB", category: "pet-fmcg", logo: "/images/logos/PET-FMCG/busyb.png" },
   { name: "Löfbergs", category: "pet-fmcg", logo: "/images/logos/PET-FMCG/lofbergs.png" },
+  { name: "Ondrášovka", category: "pet-fmcg", logo: "/images/logos/PET-FMCG/ondrasovka-logo.png" },
+  { name: "Palírna Radlík", category: "pet-fmcg", logo: "/images/logos/PET-FMCG/palirna-radlik.png" },
 
   // Hobby & Outdoor
   { name: "Toi Toi", category: "hobby-outdoor", logo: "/images/logos/HOBBY-OUTDOOR/max_toitoi.jpg" },
@@ -210,6 +212,7 @@ const clientLogos: ClientLogo[] = [
   { name: "Mini", category: "moto-elektro", logo: "/images/logos/MOTO-ELEKTRO/max_mini.jpg" },
   { name: "Dexim", category: "moto-elektro", logo: "/images/logos/MOTO-ELEKTRO/dexim.png" },
   { name: "iRobot", category: "moto-elektro", logo: "/images/logos/MOTO-ELEKTRO/irobot.png" },
+  { name: "Jackery", category: "moto-elektro", logo: "/images/logos/MOTO-ELEKTRO/jackery.svg" },
 
   // Akce
   { name: "Movember", category: "akce", logo: "/images/logos/AKCE/max_movember.jpg" },
