@@ -18,7 +18,7 @@ Spouští se ze složky `website/`.
 | build | `npm run build` |
 | produkční server lokálně | `npx next start -p 3123` |
 | lint | není – ESLint v projektu není nastavený (`next lint` zmizel s Next.js 16) |
-| test | automatické testy v repozitáři nejsou; před nasazením se dělá smoke test, viz Nasazení |
+| test | `npm run smoke -- <adresa>` – smoke test běžícího webu (`scripts/smoke.sh`), např. `http://localhost:3123` nebo `https://www.maxmediapr.cz` |
 
 ## Nasazení
 
@@ -37,7 +37,7 @@ Postup každé změny:
 6. Po produkčním buildu smoke test proti www.maxmediapr.cz a kontrola runtime chyb (Vercel MCP `get_runtime_errors`).
 7. Když produkce selže: okamžitý rollback na poznamenaný deployment (Vercel MCP `request_rollback`) a řešit s Kryštofem.
 
-Smoke test ověřuje: všechny stránky vrací 200 (`/`, `/cookies`, `/ochrana-osobnich-udaju`, `/robots.txt`, `/sitemap.xml`, `/llms.txt`), neexistující stránka 404, klíčové texty sekcí, GA měřicí ID a JSON-LD na úvodní stránce, a že se načte každý obrázek z HTML. SVG loga jdou mimo `/_next/image` (optimalizátor na ně vrací 400 záměrně), chyby z `vercel.live/feedback.js` patří Vercel toolbaru, ne webu.
+Smoke test (`scripts/smoke.sh`) ověřuje: všechny stránky vrací 200 (`/`, `/cookies`, `/ochrana-osobnich-udaju`, `/robots.txt`, `/sitemap.xml`, `/llms.txt`), neexistující stránka 404, klíčové texty sekcí, GA měřicí ID a JSON-LD na úvodní stránce, a že se načte každý obrázek z HTML. Mění-li se texty sekcí nebo loga, uprav seznam kontrolovaných textů ve skriptu ve stejném commitu. Preview za Vercel přihlášením skript z příkazové řádky neotevře – tam stejné kontroly přes přihlášený prohlížeč nebo Vercel MCP. SVG loga jdou mimo `/_next/image` (optimalizátor na ně vrací 400 záměrně), chyby z `vercel.live/feedback.js` patří Vercel toolbaru, ne webu.
 
 ## Zákazy
 

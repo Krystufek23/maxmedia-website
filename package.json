@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "smoke": "bash scripts/smoke.sh"
   },
   "dependencies": {
     "framer-motion": "^12.43.0",
